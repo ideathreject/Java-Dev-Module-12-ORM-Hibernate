@@ -1,4 +1,4 @@
-package com.goit.ORM_Hibernate.Entity;
+package com.goit.ORM_Hibernate.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

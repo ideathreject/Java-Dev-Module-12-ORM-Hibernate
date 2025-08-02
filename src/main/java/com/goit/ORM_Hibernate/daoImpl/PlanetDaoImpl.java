@@ -1,15 +1,17 @@
-package com.goit.ORM_Hibernate.CrudServices;
+package com.goit.ORM_Hibernate.daoImpl;
 
-import com.goit.ORM_Hibernate.Entity.Planet;
-import com.goit.ORM_Hibernate.Utils.HibernateUtil;
+import com.goit.ORM_Hibernate.daoServices.PlanetDao;
+import com.goit.ORM_Hibernate.entity.Planet;
+import com.goit.ORM_Hibernate.utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class PlanetCrudService {
+public class PlanetDaoImpl implements PlanetDao {
 
-    public void create(Planet planet) {
+    @Override
+    public void save(Planet planet) {
         try (Session session = HibernateUtil.getInstance().getSessionFactory().openSession()) {
             Transaction tx = session.beginTransaction();
             session.persist(planet);
@@ -17,18 +19,21 @@ public class PlanetCrudService {
         }
     }
 
-    public Planet read(String id) {
+    @Override
+    public Planet findById(String id) {
         try (Session session = HibernateUtil.getInstance().getSessionFactory().openSession()) {
             return session.get(Planet.class, id);
         }
     }
 
-    public List<Planet> readAll() {
+    @Override
+    public List<Planet> findAll() {
         try (Session session = HibernateUtil.getInstance().getSessionFactory().openSession()) {
             return session.createQuery("from Planet", Planet.class).list();
         }
     }
 
+    @Override
     public void update(Planet planet) {
         try (Session session = HibernateUtil.getInstance().getSessionFactory().openSession()) {
             Transaction tx = session.beginTransaction();
@@ -37,7 +42,8 @@ public class PlanetCrudService {
         }
     }
 
-    public void delete(String id) {
+    @Override
+    public void deleteById(String id) {
         try (Session session = HibernateUtil.getInstance().getSessionFactory().openSession()) {
             Transaction tx = session.beginTransaction();
             Planet planet = session.get(Planet.class, id);

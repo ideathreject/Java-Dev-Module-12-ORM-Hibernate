@@ -1,7 +1,7 @@
-package com.goit.ORM_Hibernate.Utils;
+package com.goit.ORM_Hibernate.utils;
 
-import com.goit.ORM_Hibernate.Entity.Client;
-import com.goit.ORM_Hibernate.Entity.Planet;
+import com.goit.ORM_Hibernate.entity.Client;
+import com.goit.ORM_Hibernate.entity.Planet;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

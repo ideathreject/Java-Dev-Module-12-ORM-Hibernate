@@ -1,11 +1,10 @@
 package com.goit.ORM_Hibernate;
 
-import com.goit.ORM_Hibernate.CrudServices.ClientCrudService;
-import com.goit.ORM_Hibernate.CrudServices.PlanetCrudService;
-import com.goit.ORM_Hibernate.Entity.Client;
-import com.goit.ORM_Hibernate.Entity.Planet;
+import com.goit.ORM_Hibernate.crudServices.ClientCrudService;
+import com.goit.ORM_Hibernate.crudServices.PlanetCrudService;
+import com.goit.ORM_Hibernate.entity.Client;
+import com.goit.ORM_Hibernate.entity.Planet;
 
-import java.util.List;
 
 public class TestCrudOperations {
     public static void main(String[] args) {
