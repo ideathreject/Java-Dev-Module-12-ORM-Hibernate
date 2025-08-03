@@ -1,7 +1,7 @@
 package com.goit.ORM_Hibernate.crudServices;
 
-import com.goit.ORM_Hibernate.daoImpl.PlanetDaoImpl;
-import com.goit.ORM_Hibernate.daoServices.PlanetDao;
+import com.goit.ORM_Hibernate.dao.PlanetDaoImpl;
+import com.goit.ORM_Hibernate.dao.PlanetDao;
 import com.goit.ORM_Hibernate.entity.Planet;
 
 import java.util.List;

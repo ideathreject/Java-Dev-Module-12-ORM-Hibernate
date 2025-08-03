@@ -1,4 +1,4 @@
-package com.goit.ORM_Hibernate.daoServices;
+package com.goit.ORM_Hibernate.dao;
 
 
 import com.goit.ORM_Hibernate.entity.Client;
