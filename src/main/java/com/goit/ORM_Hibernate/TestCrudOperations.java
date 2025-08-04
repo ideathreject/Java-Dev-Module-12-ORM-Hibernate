@@ -38,6 +38,5 @@ public class TestCrudOperations {
         planetService.update(newPlanet);
         //Delete
         planetService.delete("PLNT");
-
     }
 }

@@ -28,5 +28,4 @@ public class Client {
     @Size(min = 3, max = 200)
     @Column(nullable = false, length = 200)
     private String name;
-
 }

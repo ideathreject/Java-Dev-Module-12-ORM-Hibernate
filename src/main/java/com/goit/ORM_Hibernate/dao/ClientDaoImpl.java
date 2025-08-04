@@ -17,7 +17,9 @@ public class ClientDaoImpl implements ClientDao {
             session.persist(client);
             tx.commit();
         } catch (Exception e) {
-            if (tx != null) tx.rollback();
+            if (tx != null) {
+                tx.rollback();
+            }
         }
     }
 
@@ -43,7 +45,9 @@ public class ClientDaoImpl implements ClientDao {
             session.merge(client);
             tx.commit();
         } catch (Exception e) {
-            if (tx != null) tx.rollback();
+            if (tx != null) {
+                tx.rollback();
+            }
         }
     }
 
@@ -58,7 +62,9 @@ public class ClientDaoImpl implements ClientDao {
             }
             tx.commit();
         } catch (Exception e) {
-            if (tx != null) tx.rollback();
+            if (tx != null) {
+                tx.rollback();
+            }
         }
     }
 }

@@ -17,7 +17,9 @@ public class PlanetDaoImpl implements PlanetDao {
             session.persist(planet);
             tx.commit();
         } catch (Exception e) {
-            if (tx != null) tx.rollback();
+            if (tx != null) {
+                tx.rollback();
+            }
         }
     }
 
@@ -43,7 +45,9 @@ public class PlanetDaoImpl implements PlanetDao {
             session.merge(planet);
             tx.commit();
         } catch (Exception e) {
-            if (tx != null) tx.rollback();
+            if (tx != null) {
+                tx.rollback();
+            }
         }
     }
 
@@ -58,7 +62,9 @@ public class PlanetDaoImpl implements PlanetDao {
             }
             tx.commit();
         } catch (Exception e) {
-            if (tx != null) tx.rollback();
+            if (tx != null) {
+                tx.rollback();
+            }
         }
     }
 }
